@@ -3,8 +3,8 @@
 gather employee data from API
 '''
 
-import sys
 import requests
+import sys
 
 
 if __name__ == "__main__":
@@ -17,13 +17,14 @@ if __name__ == "__main__":
     params = {"userId": employee_id}
     tasks_response = requests.get(url + "todos", params=params)
     tasks = tasks_response.json()
-    
+
     completed = []
     for task in tasks:
         if task.get("completed") is True:
             completed.append(task.get("title"))
 
-    print("Employee {} is done with tasks({}/{})".format(user.get("name"), len(completed), len(tasks)))
+    print("Employee {} is done with tasks({}/{}):"
+          .format(user.get("name"), len(completed), len(tasks)))
 
     for title in completed:
         print("\t {}".format(title))
