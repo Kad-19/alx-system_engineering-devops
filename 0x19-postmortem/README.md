@@ -1,14 +1,7 @@
 
-<h1> <b>Sever Requests Failure Report </b></h1> </br> 
-Last Month, it was reported that all the request made to our server is returning a 500 Error, all our services were down. The root cause was from one of the configuration file of our server web_stack_debugging_1.
-
-<h1> <b>TimeLine</b></h1> </br> 
-The error was realized on 28th of May 2:00 pm(GMT). When pager notify one of our team members. Our engineering team On-call quickly login to the server for further analysis and to get to the root of the problem. The problem was solved later by 28th of May 3:00 pm (GMT).
-
-<h1> <b>Root Cause and Resolution </b></h1> </br> 
-The server stopped working because the config of the software(Nginx) serving the server pages is seen to be a directory instead of a symoblic link to another config file. The config file(sites-enabled) was quickly deleted. The config file(sites-enabled) is then made a symbolic link to the original config file(sites-available). The server was restarted. 100% of traffic is back.
-
-<h1> <b>Prevention against such problm in future</b></h1> </br> 
-Always test and thoroughly check the config files before deployment.
-ALways keep an eye on servers to ensure proper running of them.
-Always have backup severs to prevent all of our services from being down during an isuue.
+<h2> <b>Sever Requests Failure Report </b></h2> </br> 
+It was reported last month that all of our services were unavailable and that all requests sent to our server were receiving a 500 error. One of our server's configuration files, web_stack_debugging_1, was the root problem.
+<h2> <b>TimeLine</b></h2> </br> 
+The mistake was discovered on June 2 at 2:00 PM (GMT+3). Notify a member of our staff via Telegram. In order to conduct more investigation and identify the source of the issue, our engineering team on call swiftly logs into the server. The issue was resolved on June 2nd, 5:00 p.m. (GMT+3).
+<h2> <b>Root Cause and Resolution </b></h2> </br> 
+Because the configuration of the program (Nginx) that serves the server pages is viewed as a directory rather than a symbolic link to another config file, the server ceased functioning. The sites-enabled configuration file was promptly removed. Next, a symbolic link to the original configuration file (sites-available) is created from the config file (sites-enabled). There was a server restart. All traffic has returned to 100%.
